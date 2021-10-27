@@ -9,3 +9,17 @@ Input: arr[] = {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9}
 Output: 1 9 8 4 2 7 6 9 0 0 0 0 0
 ```
 OP --> https://www.geeksforgeeks.org/move-zeroes-end-array-set-2-using-single-traversal/
+
+### Modern Solution
+```java
+class Solution {
+    static void moveNoneZerosLeft(int arr[]) {
+        final AtomicInteger count = new AtomicInteger(0); 
+        IntStream.range(0, arr.length).filter(i -> arr[i] != 0).forEach(i -> {
+            var temp = arr[count.get()];
+            arr[count.getAndIncrement()] = arr[i];
+            arr[i] = temp;
+        });
+    }
+}
+```
