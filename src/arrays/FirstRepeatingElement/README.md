@@ -1,4 +1,4 @@
-## Find Duplicates in Array
+## First Repeating Element
 
 Given an array arr[] of size n, find the first repeating element. The element should occurs more than once and the index
 of its first occurrence should be the smallest.
@@ -35,7 +35,7 @@ OP --> https://www.geeksforgeeks.org/find-first-repeating-element-array-integers
 
 ```java
 class Solution {
-    static int findFirstRepeating(int arr[]) {
+    static int findFirstRepeating(int[] arr) {
         AtomicInteger result = new AtomicInteger(-1);
         Set<Integer> set = new HashSet<>();
         IntStream.range(0, arr.length).map(i -> arr.length - i - 1).forEach(i -> {

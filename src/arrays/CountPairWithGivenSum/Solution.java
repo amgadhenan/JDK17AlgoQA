@@ -13,7 +13,7 @@ class Solution {
         return count.get();
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int[] arr = {1, 5, 7, -1, 5};
         int sum = 6;
         System.out.println("Pair Count is :" + getPairsCount(arr, sum));
