@@ -5,11 +5,11 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 class Solution {
-    public static List<Integer> findDisappearedNumbers(int[] nums) {
-        IntStream.range(0, nums.length).filter(i -> Math.abs(nums[i]) - 1 < nums.length).forEach(i -> {
-            nums[Math.abs(nums[i]) - 1] *= (nums[Math.abs(nums[i]) - 1] > 0) ? -1 : 1;
+    public static List<Integer> findDisappearedNumbers(int[] arr) {
+        IntStream.range(0, arr.length).filter(i -> Math.abs(arr[i]) - 1 < arr.length).forEach(i -> {
+            arr[Math.abs(arr[i]) - 1] *= (arr[Math.abs(arr[i]) - 1] > 0) ? -1 : 1;
         });
-        return IntStream.range(0, nums.length).filter(i -> nums[i] > 0).map(i -> i + 1)
+        return IntStream.range(0, arr.length).filter(i -> arr[i] > 0).map(i -> i + 1)
                 .boxed().collect(Collectors.toList());
     }
 

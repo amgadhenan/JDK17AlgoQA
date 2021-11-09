@@ -15,7 +15,7 @@ OP --> https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negati
 ### Modern Solution
 ```java
 class Solution {
-    void rearrange(int arr[]) {
+    void rearrange(int[] arr) {
         final AtomicInteger outOfPlace = new AtomicInteger(-1);
         IntStream.range(0, arr.length).forEach(i -> {
             if (outOfPlace.get() >= 0 &&

@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 //OP --> https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space
 class Solution {
 
-    static void rearrange(int arr[]) {
+    static void rearrange(int[] arr) {
         final AtomicInteger outOfPlace = new AtomicInteger(-1);
         IntStream.range(0, arr.length).forEach(i -> {
             if (outOfPlace.get() >= 0 &&

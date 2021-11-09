@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
-    static List<Integer> findCommon(int ar1[], int ar2[], int ar3[]) {
+    static List<Integer> findCommon(int[] ar1, int[] ar2, int[] ar3) {
         int i = 0, j = 0, k = 0;
         List<Integer> result = new ArrayList<>();
         do {
@@ -25,7 +25,7 @@ class Solution {
     }
 
     // Driver code to test above
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         int ar1[] = {1, 5, 10, 20, 40, 80};
         int ar2[] = {6, 7, 20, 80, 100};

@@ -24,7 +24,7 @@ OP --> https://practice.geeksforgeeks.org/problems/common-elements
 
 ```java
 class Solution {
-    static List<Integer> findCommon(int ar1[], int ar2[], int ar3[]) {
+    static List<Integer> findCommon(int[] ar1, int[] ar2, int[] ar3) {
         int i = 0, j = 0, k = 0;
         List<Integer> result = new ArrayList<>();
         do {

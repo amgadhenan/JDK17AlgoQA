@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 //OP --> https://www.geeksforgeeks.org/move-zeroes-end-array/
 class Solution {
     // Function which pushes all zeros to end of an array.
-    static void moveNoneZerosLeft(int arr[]) {
+    static void moveNoneZerosLeft(int[] arr) {
         final AtomicInteger count = new AtomicInteger(0); // Count of non-zero elements
 
         // Traverse the array. If arr[i] is

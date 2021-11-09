@@ -13,7 +13,7 @@ OP --> https://www.geeksforgeeks.org/move-zeroes-end-array/
 ### Modern Solution
 ```java
 class Solution {
-    static void pushZerosToEnd(int arr[]) {
+    static void pushZerosToEnd(int[] arr) {
         final AtomicInteger count = new AtomicInteger(0);  
         IntStream.range(0, arr.length).filter(i -> arr[i] != 0).forEach(i -> arr[count.getAndIncrement()] = arr[i]);
         IntStream.range(count.get(), arr.length).forEach(i -> arr[i] = 0);

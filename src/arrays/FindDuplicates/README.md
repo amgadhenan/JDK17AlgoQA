@@ -23,7 +23,7 @@ OP --> https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array
 ### Modern Solution
 ```java
 class Solution {
-    static List<Integer> printRepeating(int arr[]) {
+    static List<Integer> findRepeating(int[] arr) {
         Arrays.stream(arr).map(j -> j % arr.length).forEach(i -> arr[i] += arr.length);
         return IntStream.range(0, arr.length).filter(i -> arr[i] / arr.length >= 2)
                 .boxed().collect(Collectors.toList());
